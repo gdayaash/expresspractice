@@ -44,7 +44,7 @@ export const MovieDetails = async (req, res) => {
   }
 };
 
-//Update
+//Update the
 export const MovieAlter = async (req, res) => {
   try {
     const result = await Movie.findOneAndUpdate(
