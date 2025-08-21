@@ -2,6 +2,7 @@ import express from "express";
 import {
   MovieAlter,
   MovieCreate,
+  MovieDetails,
   MovieIndex,
   MoviePop,
 } from "../controllers/movies.controller.js";
@@ -15,6 +16,10 @@ movieRoute.post("/", MovieCreate);
 
 //Reading
 movieRoute.get("/", MovieIndex);
+
+//MovieDeatails
+
+movieRoute.get("/:id", MovieDetails);
 
 // Updating
 movieRoute.put("/:id", MovieAlter);

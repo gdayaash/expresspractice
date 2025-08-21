@@ -6,6 +6,10 @@ const app = express();
 
 const port = 5000;
 
+//Understanding Middleware (__*****Important*******__ This Middleware is important for the express to understand the json incoming for any API's)
+app.use(express.json()); //raw incoming data understanding Middleware
+app.use(express.urlencoded({ extended: true }));
+
 //Connecting Database
 connectDb();
 
